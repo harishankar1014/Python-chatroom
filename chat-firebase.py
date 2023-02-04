@@ -47,8 +47,8 @@ if st.button('Submit',key=1):
 with st.sidebar:
     option = st.selectbox(
     'What would you like to do?',
-    ('Create a private room', 'Join a private room'))
-    if option == 'Create a private room':
+    ('Create a room', 'Join a room'))
+    if option == 'Create a room':
         st.title('Enter name of the room to create')
         room_name = st.text_input("").strip()
         if st.button('Submit',key=2):
@@ -60,7 +60,7 @@ with st.sidebar:
             else:
                 st.text("The room "+room_name+" already exists")
    
-    if option == 'Join a private room':
+    if option == 'Join a room':
         st.title('Enter name of the room')
         room_name = st.text_input("")
         if st.button('Submit',key=3):
